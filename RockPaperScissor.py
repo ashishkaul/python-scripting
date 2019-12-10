@@ -1,7 +1,7 @@
 from random import random
 
 
-user_input = input('Choose Rock, Paper or Scrissor: ')
+user_input = input('Choose Rock, Paper or Scissor: ')
 computer_input = int(random()*10)
 
 dict = {'Rock': 3, 'Paper': 5, 'Scissor' :7}
