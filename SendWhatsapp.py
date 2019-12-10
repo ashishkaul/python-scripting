@@ -9,7 +9,7 @@ message = input('Enter message: ')
 
 input('Press enter after scanning QR code')
 
-def user_exists(recipient):
+def recipient_exists(recipient):
     recipient_exists = False
     try:
         driver.find_element_by_xpath('//span[@title = "{}"]'.format(recipient.strip()))
@@ -20,7 +20,7 @@ def user_exists(recipient):
         return recipient_exists
 
 for recipient in recipients:
-    if(user_exists(recipient)):
+    if(recipient_exists(recipient)):
         user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(recipient.strip()))
         user.click()
         message_box = driver.find_element_by_xpath('//footer//div/div[2]/div')
